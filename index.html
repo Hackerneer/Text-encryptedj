@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Secret Emoji Converter</title>
+    <link rel="manifest" href="manifest.json" />
+    <style>
+        body {
+            background-color: #121212;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        input, button {
+            padding: 10px;
+            margin: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+        }
+        input {
+            width: 80%;
+        }
+        .btn-encrypt {
+            background-color: purple;
+            color: white;
+        }
+        .btn-decrypt {
+            background-color: gold;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Secret Emoji Converter</h1>
+    <input type="text" id="inputText" placeholder="Type your text here..."><br/>
+    <button class="btn-encrypt" onclick="convert()">Convert (Encrypt)</button>
+    <button class="btn-decrypt" onclick="decode()">Decode (Decrypt)</button>
+    <h3>Result:</h3>
+    <div id="result"></div>
+
+    <script>
+        function convert() {
+            let text = document.getElementById("inputText").value;
+            let emoji = "😉😊😎";
+            document.getElementById("result").innerText = emoji.repeat(1);
+        }
+
+        function decode() {
+            document.getElementById("result").innerText = "Decoded text here";
+        }
+    </script>
+</body>
+</html>
